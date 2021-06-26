@@ -1,5 +1,6 @@
 <?php
 
+use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
@@ -21,33 +22,25 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given Admin enters a name for the customer
+     * @Given Admin puts a name :arg1 and email :arg2
      */
-    public function adminEntersANameForTheCustomer()
+    public function adminPutsANameAndEmail($arg1, $arg2)
     {
         throw new PendingException();
     }
 
     /**
-     * @Given Admin enters an email for the customer
+     * @When Admin click to save
      */
-    public function adminEntersAnEmailForTheCustomer()
+    public function adminClickToSave()
     {
         throw new PendingException();
     }
 
     /**
-     * @When Admin send customers data
+     * @Then The system saves the customer data
      */
-    public function adminSendCustomersData()
-    {
-        throw new PendingException();
-    }
-
-    /**
-     * @Then system saves the customer data
-     */
-    public function systemSavesTheCustomerData()
+    public function theSystemSavesTheCustomerData()
     {
         throw new PendingException();
     }
